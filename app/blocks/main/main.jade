@@ -1,0 +1,40 @@
+include ../input-fields/input-fields
+include ../checkboxes/checkboxes
+
+mixin main()
+	+b.main
+		+e.logo1
+			+e('img').image(src='../assets/images/logo1.png')
+		+e.logo2
+			+e('img').image(src='../assets/images/logo2.png')
+		+e.logo3
+			+e('img').image(src='../assets/images/logo3.png')
+		+input-fields()
+		+e.checkbox-title
+			|Расскажите о себе чекбоксами
+		+e.checkbox-description
+			|Отметьте чекбоксами пункты, которые соответствуют вашим скиллам.Кстати,отсутсвие опыта не означает, что у вас меньше шансов стать одним из наших товарищей.Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+		+checkboxes({
+			list: [
+				{title: 'БЭМ/OOCSS',number :'1'},
+				{title: 'Gulp/GRUNT' ,number :'2' },
+				{title: 'Использую Git' ,number :'3'},
+				{title: 'Pug(Jade)' ,number :'4' },
+				{title: 'Webpack' ,number :'5' },
+				{title: 'С глазомером всё ок' , number :'6'},
+				{title: 'Stylus/LESS/SASS'  ,number :'7' },
+				{title: 'Дружу с WebGL' , number :'8'},
+				{title: 'Читаю blog.csssr.ru' , number :'9'},
+				{title: 'Работаю с SVG' ,number :'10'},
+				{title: 'jQuery' ,number :'11'},
+				{title: 'Я ленивый(-ая)' , number :'12'},
+				{title: 'Верстаю семантично' ,number :'13'},
+				{title: 'Знаю/изучаю Angular',number :'14'} ,
+				{title: 'У меня хороший англ',number :'15'},
+				{title: 'Accessibility (A11Y)',number :'16'},
+				{title: 'Знаю/изучаю React',number :'17'},
+				{title: 'ES2015/2016',number :'18'},
+				{title: 'Знаю/изучаю Node.js',number :'19'}
+			]
+		})
+		+e('div').slider

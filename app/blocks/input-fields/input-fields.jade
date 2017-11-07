@@ -1,0 +1,32 @@
+
+mixin input-fields()
+	+b.input-fields
+		+e('ul').list
+			+e('li').list-item1 
+				+e('label').input-label(for="text-input")
+					|Полное ФИO
+				+e('input').text-input(placeholder="Иванов Иван Иванович" type="text" class="fio")
+
+			+e('li').list-item2
+				+e('label').input-label(for="text-input" )
+					|Год рождения
+				+e('input').text-input(placeholder="1990" type="text" class="year")
+
+			+e('li').list-item3
+				+e('label').input-label(for="text-input")
+					|Место жительства
+				+e('input').text-input(placeholder="г. Иваново, Россия " type="text" class="placeOfLiving") 
+
+			+e('li').list-item4
+				+e('label').input-label(for="text-input")
+					|Скайп
+				+e('input').text-input(placeholder="ivanov" type="text" class="skype")
+
+			+e('li').list-item5
+				+e('label').input-label(for="text-input")
+					|Почта
+				+e('input').text-input( placeholder="ivanov@gmail.com" type="email" class="email")
+
+		
+			
+		

@@ -1,0 +1,21 @@
+mixin skill-slider()
+	+b.skill-slider
+		+e.description
+			|Уровень владения JavaScript
+		+e('label').label(for='amount')
+			|Volume:
+		+e('div').input(id='amount')
+		+e('div').class(id='slider')	
+		+e.slider-block
+		+e('img').slider-skeleton(src='../assets/images/slider-skeleton.png')
+		+e.slider-comments-block
+			+e.description1
+				|Не владею
+			+e.description2
+		 		|Использую готовые решения
+		 	+e.description3
+		 		|Использую готовые решения и умею их переделывать
+		 	+e.description4
+		 		|Пишу сложный JS с нуля
+
+

@@ -1,0 +1,12 @@
+mixin checkboxes(data)
+	- data = data || []
+	- rows = 0
+
+	+b.checkboxes
+		+e('ul').column
+			each item in data.list
+				- rows = rows + 1
+				+e('li').checkbox.js-checkbox
+					+e.box.js-box(id='box'+rows)
+					+e.description= item.title
+
